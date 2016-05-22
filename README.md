@@ -35,7 +35,7 @@ ___size___ Number. Optional.  A multiplier to scale the input unit, set to `1` i
 
 ### Unwrapping a scale
 
-A scale is an inermediate value that can be unwrapped into a string that can be sent to a tool like [Radium](https://github.com/FormidableLabs/radium).
+As an intermediate value, a scale can be unwrapped into a string that can used with a tool like [Radium](https://github.com/FormidableLabs/radium).
 
 ```js
 const wrapper = {
