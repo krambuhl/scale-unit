@@ -1,7 +1,7 @@
 {
   "name": "scale-unit",
   "version": "1.0.0",
-  "description": "A module for scaling css units in javascript.",
+  "description": "A module for scaling measurements in javascript.",
   "main": "index.js",
   "scripts": {
     "test": "tape tests/**/*.test.js"
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/krambuhl/scale-unit#readme",
   "devDependencies": {
-    "tape": "^4.5.1"
+    "tape": "~4"
   }
 }
