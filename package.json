@@ -1,0 +1,22 @@
+{
+  "name": "scale-unit",
+  "version": "1.0.0",
+  "description": "A module for scaling css units in javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krambuhl/scale-unit.git"
+  },
+  "author": "Evan Krambuhl <thekrambuhl@gmail.com> (http://stumptownbear.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krambuhl/scale-unit/issues"
+  },
+  "homepage": "https://github.com/krambuhl/scale-unit#readme",
+  "devDependencies": {
+    "tape": "^4.5.1"
+  }
+}
