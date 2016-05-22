@@ -22,16 +22,39 @@ const headerSize = scale(baseSize, 2);
 
 ### Defining a scale
 
-___scale(unit, size)___
+#### scale(unit, multiplier)
 
 ```js
 const wrapperWidth = scale('em', 60);
 const textWidth = scale(wrapperWidth, 0.75);
 ```
 
-___unit___ String or Scale. A string representing the measurement unit or another scale.
+___unit___ String or Scale. Optional. A string representing the measurement unit or another scale.
 
 ___size___ Number. Optional.  A multiplier to scale the input unit, set to `1` if omitted.
+
+#### Sugar
+
+##### scale()
+
+```js
+const one = scale(); // 1
+const two = scale(one, 2); // 2m
+```
+
+##### scale(unit)
+
+```js
+const oneEm = scale('em'); // 1em
+const oneEm = scale(oneEm, 5); // 5em
+```
+
+##### scale(size)
+
+```js
+const ten = scale(10); // 10
+const hundred = scale(ten, 10); // 100
+```
 
 ### Unwrapping a scale
 
