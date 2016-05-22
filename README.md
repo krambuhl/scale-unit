@@ -24,14 +24,14 @@ const headerSize = scale(baseSize, 2);
 
 #### scale(unit, multiplier)
 
-Returns an intermediate function. It's value and measurement unit are tracked seperately.
+Returns an intermediate scale function. It's value and measurement unit are tracked seperately.
 
 ```js
 const wrapperWidth = scale('em', 60);
 const textWidth = scale(wrapperWidth, 0.75);
 ```
 
-___unit___ String or Scale. Optional. A string representing the measurement unit or another scale.
+___unit___ String or Scale. Optional. A string representing the measurement unit or another scale function.
 
 ___size___ Number. Optional.  A multiplier to scale the input unit, set to `1` if omitted.
 
@@ -61,8 +61,8 @@ const two = scale(one, 2); // 2m
 #### scale(unit)
 
 ```js
-const oneEm = scale('em'); // 1em
-const oneEm = scale(oneEm, 5); // 5em
+const em = scale('em'); // 1em
+const fiveEm = scale(em, 5); // 5em
 ```
 
 #### scale(size)
