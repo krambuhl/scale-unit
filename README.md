@@ -1,6 +1,6 @@
 # scale-unit
 
-A module for scaling css units in javascript.  
+A module for scaling measurements in javascript.  
 
 ## Install
 
