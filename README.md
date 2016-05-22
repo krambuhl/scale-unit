@@ -24,6 +24,8 @@ const headerSize = scale(baseSize, 2);
 
 #### scale(unit, multiplier)
 
+Returns an intermediate function. It's value and measurement unit are tracked seperately.
+
 ```js
 const wrapperWidth = scale('em', 60);
 const textWidth = scale(wrapperWidth, 0.75);
@@ -33,32 +35,9 @@ ___unit___ String or Scale. Optional. A string representing the measurement unit
 
 ___size___ Number. Optional.  A multiplier to scale the input unit, set to `1` if omitted.
 
-#### Sugar
-
-##### scale()
-
-```js
-const one = scale(); // 1
-const two = scale(one, 2); // 2m
-```
-
-##### scale(unit)
-
-```js
-const oneEm = scale('em'); // 1em
-const oneEm = scale(oneEm, 5); // 5em
-```
-
-##### scale(size)
-
-```js
-const ten = scale(10); // 10
-const hundred = scale(ten, 10); // 100
-```
-
 ### Unwrapping a scale
 
-As an intermediate value, a scale can be unwrapped into a string that can used with a tool like [Radium](https://github.com/FormidableLabs/radium).
+As an intermediate function, a scale can be unwrapped into a string that can used with a tool like [Radium](https://github.com/FormidableLabs/radium).
 
 ```js
 const wrapper = {
@@ -68,6 +47,29 @@ const wrapper = {
 const textWrapper = {
     maxWidth: textWidth() // 45em
 };
+```
+
+### Sugars
+
+#### scale()
+
+```js
+const one = scale(); // 1
+const two = scale(one, 2); // 2m
+```
+
+#### scale(unit)
+
+```js
+const oneEm = scale('em'); // 1em
+const oneEm = scale(oneEm, 5); // 5em
+```
+
+#### scale(size)
+
+```js
+const ten = scale(10); // 10
+const hundred = scale(ten, 10); // 100
 ```
 
 ## License
