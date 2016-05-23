@@ -1,8 +1,6 @@
-'use strict';
-
 module.exports = function scale(unit, multi) {
   if (arguments.length === 1) {
-    const type = typeof unit === 'number';
+    var type = typeof unit === 'number';
     multi = type ? unit : 1;
     unit = type ? '' : unit;
   } else if (arguments.length === 0) {
