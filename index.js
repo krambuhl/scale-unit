@@ -19,8 +19,9 @@ module.exports = function scale(unit, multi) {
 
 
 function createScale(unit, num) {
-  var scale = 
-    () => scale.num + scale.unit;
+  function scale() {
+    return scale.num + scale.unit;
+  }
 
   scale.unit = unit;
   scale.num = num;

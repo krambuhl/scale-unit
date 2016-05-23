@@ -1,6 +1,6 @@
 {
   "name": "scale-unit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A module for scaling measurements in javascript.",
   "main": "index.js",
   "scripts": {
