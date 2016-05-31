@@ -49,7 +49,6 @@ test('scale(inheritUnitless, 2)', t => {
   t.equal(def2(), '20');
 });
 
-
 test('scale(inheritDeep, 2)', t => {
   const em = scale('em', 2);
   const my = scale(em, 2);
@@ -59,4 +58,21 @@ test('scale(inheritDeep, 2)', t => {
   t.equal(em(), '2em');
   t.equal(my(), '4em');
   t.equal(ch(), '8em');
+});
+
+test('scale()', t => {
+  const em = scale();
+
+  t.plan(1);
+  t.equal(em(), '1');
+});
+
+test('measurement(unit)', t => {
+  const em = scale('em', 2);
+  const my = scale(em, 2);
+
+  t.plan(3);
+  t.equal(em(), '2em');
+  t.equal(my(), '4em');
+  t.equal(my(2), '8em');
 });

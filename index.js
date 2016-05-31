@@ -15,12 +15,11 @@ module.exports = function scale(unit, multi) {
 
   // if unit is string or undefined
   return createScale(unit, multi);
-}
-
+};
 
 function createScale(unit, num) {
-  function scale() {
-    return scale.num + scale.unit;
+  function scale(multi) {
+    return ((multi || 1) * scale.num) + scale.unit;
   }
 
   scale.unit = unit;
